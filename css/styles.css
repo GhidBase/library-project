@@ -6,11 +6,14 @@
     --blue: rgb(0, 162, 255);
     --white: white;
     --grey: rgb(214, 214, 214);
+    --green: #14532d;
+    --green-2: #166534;
+    --dark-yellow: #bbf7d0;
 
-    --footer-and-header-background-color: var(--white);
-    --header-color: black;
-    --background-color: var(--grey);
-    --book-color: var(--blue)
+    --footer-and-header-background-color: var(--green);
+    --header-color: var(--white);
+    --background-color: var(--white);
+    --book-color: var(--green-2)
 }
 
 a {
