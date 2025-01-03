@@ -6,6 +6,10 @@
     --blue: rgb(0, 162, 255);
     --white: white;
     --grey: rgb(214, 214, 214);
+
+    --footer-and-header-color: var(--white);
+    --background-color: var(--grey);
+
 }
 
 body {
@@ -22,7 +26,7 @@ body {
 }
 
 .header {
-    background-color: var(--white);
+    background-color: var(--footer-and-header-color);
     /* color: var(--white); */
     display: flex;
     justify-content: center;
@@ -33,7 +37,7 @@ body {
 }
 
 .footer {
-    background-color: var(--white);
+    background-color: var(--footer-and-header-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,5 +61,5 @@ body {
 .library {
     padding: 0 10% 0 10%;
     flex: 1;
-    background-color: var(--grey);
+    background-color: var(--background-color);
 }
