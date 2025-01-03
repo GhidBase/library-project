@@ -7,9 +7,10 @@
     --white: white;
     --grey: rgb(214, 214, 214);
 
-    --footer-and-header-color: var(--white);
+    --footer-and-header-background-color: var(--white);
+    --header-color: black;
     --background-color: var(--grey);
-
+    --book-color: var(--blue)
 }
 
 a {
@@ -24,14 +25,29 @@ body {
     width: 100vw;
 }
 
-.container {
-    display: flex;
+.library {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
     grid-row: 2;
+    padding: 25px 10% 0 10%;
+    flex: 1;
+    background-color: var(--background-color);
+    justify-content: center;
 }
 
+.book {
+    width: 220px;
+    height: 250px;
+    background-color: var(--book-color);
+    box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.705);
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+
 .header {
-    background-color: var(--footer-and-header-color);
-    /* color: var(--white); */
+    background-color: var(--footer-and-header-background-color);
+    color: var(--header-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +57,7 @@ body {
 }
 
 .footer {
-    background-color: var(--footer-and-header-color);
+    background-color: var(--footer-and-header-background-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,10 +76,4 @@ body {
 .footer img {
     width: 50px;
     height: auto;
-}
-
-.library {
-    padding: 0 10% 0 10%;
-    flex: 1;
-    background-color: var(--background-color);
 }
