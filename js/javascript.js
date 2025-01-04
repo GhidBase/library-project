@@ -4,6 +4,11 @@ const libraryElement = document.querySelector("#library");
 const addBookButton = document.querySelector("#addBook");
 const cancelButton = document.querySelector("#cancel-button");
 const bookInputWindow = document.querySelector("#book-input");
+const submitButton = document.querySelector("#submit-button");
+const titleInput = submitButton.querySelector("#title");
+const authorInput = submitButton.querySelector("#author");
+const pagesInput = submitButton.querySelector("#pages");
+const readStatus = submitButton.querySelector("#read-status")
 
 function Book(title, author, pages, readStatus) {
     this.title = title;
@@ -34,4 +39,8 @@ addBookButton.addEventListener("click", function() {
 
 cancelButton.addEventListener("click", function() {
     hideAddBookWindow();
+})
+
+submitButton.addEventListener("click", function() {
+    addBookToLibrary()
 })

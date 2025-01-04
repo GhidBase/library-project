@@ -30,8 +30,8 @@ body {
 
 .library {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 125px);
-    grid-template-rows: repeat(auto-fit, 280px);
+    grid-template-columns: repeat(auto-fit, 110px);
+    grid-template-rows: repeat(auto-fit, 250px);
     grid-row: 2;
     padding: 25px 10% 25px 10%;
     flex: 1;
@@ -39,6 +39,8 @@ body {
     justify-content: center;
     justify-items: center;
     align-items: center;
+    overflow: auto;
+    gap: 30px 20px;
 }
 
 .book {
@@ -87,13 +89,49 @@ body {
 
 .book-input {
     position: absolute;
-    width: 500px;
-    height: 500px;
+    width: 350px;
+    height: 240px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: grey;
     z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.book-input .inputs {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.book-input > .inputs > div {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex: 1;
+    gap: 4px;
+}
+
+.book-input > .inputs > div > label {
+    align-self: center;
+}
+
+.book-input .clickables {
+    display: flex;
+}
+
+.book-input .clickables button {
+    flex: 1;
 }
 
 .addBook {
