@@ -38,6 +38,7 @@ function addBookToLibrary(title, author, pages, readStatus) {
     libraryElement.insertBefore(newDiv, addBookButton);
 
     hideAddBookWindow();
+    resetInputFields();
 }
 
 function addFieldToBook(header, data, target) {
@@ -56,6 +57,13 @@ function hideAddBookWindow() {
 
 function displayAddBookWindow() {
     document.body.appendChild(bookInputWindow);
+}
+
+function resetInputFields() {
+    titleInput.value = null;
+    authorInput.value = null;
+    pagesInput.value = null;
+    readStatus.checked = false;
 }
 
 addBookButton.addEventListener("click", function() {
