@@ -8,7 +8,7 @@ const submitButton = document.querySelector("#submit-button");
 const titleInput = bookInputWindow.querySelector("#title");
 const authorInput = bookInputWindow.querySelector("#author");
 const pagesInput = bookInputWindow.querySelector("#pages");
-const readStatus = bookInputWindow.querySelector("#read-status")
+const readStatus = bookInputWindow.querySelector("#read-status");
 
 function Book(title, author, pages, readStatus) {
     this.title = title;
@@ -34,6 +34,9 @@ function addBookToLibrary(title, author, pages, readStatus) {
     let newButton = document.createElement("button");
     newButton.textContent = "Remove";
     newDiv.appendChild(newButton);
+    newButton.addEventListener("click", function() {
+        newDiv.remove();
+    })
 
     libraryElement.insertBefore(newDiv, addBookButton);
 
