@@ -2,6 +2,8 @@ const myLibrary = [];
 
 const libraryElement = document.querySelector("#library");
 const addBookButton = document.querySelector("#addBook");
+const cancelButton = document.querySelector("#cancel-button");
+const bookInputWindow = document.querySelector("#book-input");
 
 function Book(title, author, pages, readStatus) {
     this.title = title;
@@ -17,11 +19,19 @@ function addBookToLibrary(title, author, pages, readStatus) {
     libraryElement.insertBefore(newDiv, addBookButton);
 }
 
-// addBookToLibrary("The Way of the Wolf", "Jordan Belfort", 256, true);
-// addBookToLibrary("Magic Tree House: Dinosaurs Before Dark", "Mary Pope Osborn", 80, true);
+function hideAddBookWindow() {
+    document.body.removeChild(bookInputWindow);
+}
+
+function displayAddBookWindow() {
+    document.body.appendChild(bookInputWindow);
+}
 
 addBookButton.addEventListener("click", function() {
-    addBookToLibrary("test", "test", 10, true)
+    // addBookToLibrary("test", "test", 10, true)
+    displayAddBookWindow();
 });
 
-console.log(addBookButton)
+cancelButton.addEventListener("click", function() {
+    hideAddBookWindow();
+})
