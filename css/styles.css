@@ -79,6 +79,10 @@ body {
     color: black;
 }
 
+.book label {
+    margin-left: 4px;
+}
+
 
 .header {
     background-color: var(--footer-and-header-background-color);

@@ -31,15 +31,20 @@ function addBookToLibrary(title, author, pages, readStatus) {
     addFieldToBook("Pages", pages, newDiv);
     
 
+    let uniqueValue = Date.now();
     let readStatusDiv = document.createElement("div");
     newDiv.appendChild(readStatusDiv);
     let readStatusCheckbox = document.createElement("input");
     readStatusCheckbox.setAttribute("type", "checkbox");
-    readStatusCheckbox.setAttribute("id", "read-status");
+    readStatusCheckbox.setAttribute("id", "read-status" + uniqueValue);
+    readStatusCheckbox.checked = readStatus;
     readStatusDiv.appendChild(readStatusCheckbox);
     let readStatusLabel = document.createElement("label");
-    readStatusLabel.setAttribute("for", "read-status");
-    readStatusLabel.textContent = readStatus ? "Already finished reading" : "Haven't read yet";
+    readStatusLabel.setAttribute("for", "read-status" + uniqueValue);
+    readStatusLabel.textContent = readStatus ? "Already finished" : "Haven't read yet";
+    readStatusCheckbox.addEventListener("click", function() {
+        readStatusLabel.textContent = readStatusCheckbox.checked ? "Already finished" : "Haven't read yet";
+    })
     readStatusDiv.appendChild(readStatusLabel);
 
     let newButton = document.createElement("button");
