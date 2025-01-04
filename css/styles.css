@@ -12,8 +12,9 @@
 
     --footer-and-header-background-color: var(--green);
     --header-color: var(--white);
-    --background-color: var(--white);
-    --book-color: var(--green-2)
+    --background-color: var(--grey);
+    --book-background-color: var(--green-2);
+    --book-color: var(--white);
 }
 
 a {
@@ -46,11 +47,35 @@ body {
 .book {
     width: 220px;
     height: 250px;
-    background-color: var(--book-color);
+    background-color: var(--book-background-color);
     box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.705);
     border-radius: 8px;
     border: 1px solid black;
     grid-column: span 2;
+    padding: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book * {
+    margin: 0;
+    color: var(--book-color);
+}
+
+.book>h4 {
+    margin-bottom: 2px;
+}
+
+.book>p {
+    margin-bottom: 8px;
+}
+
+.book>button {
+    margin-top: auto;
+    color: black;
 }
 
 

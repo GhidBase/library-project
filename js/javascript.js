@@ -19,10 +19,36 @@ function Book(title, author, pages, readStatus) {
 
 function addBookToLibrary(title, author, pages, readStatus) {
     myLibrary.push(new Book(title, author, pages, readStatus));
+
     let newDiv = document.createElement("div");
     newDiv.classList.add("book");
+
+    addFieldToBook("Title:", title, newDiv);
+    addFieldToBook("Author:", author, newDiv);
+    addFieldToBook("Pages", pages, newDiv);
+    
+    let readStatusP = document.createElement("p");
+    readStatusP.textContent = readStatus ? "Already finished reading" : "Haven't read yet";
+    newDiv.appendChild(readStatusP);
+
+    let newButton = document.createElement("button");
+    newButton.textContent = "Remove";
+    newDiv.appendChild(newButton);
+
     libraryElement.insertBefore(newDiv, addBookButton);
+
+    hideAddBookWindow();
 }
+
+function addFieldToBook(header, data, target) {
+    let newHeader = document.createElement("h4");
+    newHeader.textContent = header;
+    let newP = document.createElement("p");
+    newP.textContent = data;
+    target.appendChild(newHeader);
+    target.appendChild(newP);
+}
+
 
 function hideAddBookWindow() {
     document.body.removeChild(bookInputWindow);
@@ -41,7 +67,7 @@ cancelButton.addEventListener("click", function() {
 })
 
 submitButton.addEventListener("click", function() {
-    addBookToLibrary()
+    addBookToLibrary(titleInput.value, authorInput.value, pagesInput.value, readStatus.checked)
     console.log(titleInput.value, authorInput.value, pagesInput.value, readStatus.checked)
 })
 
