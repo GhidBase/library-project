@@ -31,7 +31,7 @@ body {
 .library {
     display: grid;
     grid-template-columns: repeat(auto-fit, 125px);
-    grid-template-rows: repeat(auto-fit, 250px);
+    grid-template-rows: repeat(auto-fit, 280px);
     grid-row: 2;
     padding: 25px 10% 25px 10%;
     flex: 1;

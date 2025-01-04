@@ -17,7 +17,11 @@ function addBookToLibrary(title, author, pages, readStatus) {
     libraryElement.insertBefore(newDiv, addBookButton);
 }
 
-addBookToLibrary("The Way of the Wolf", "Jordan Belfort", 256, true);
-addBookToLibrary("Magic Tree House: Dinosaurs Before Dark", "Mary Pope Osborn", 80, true);
+// addBookToLibrary("The Way of the Wolf", "Jordan Belfort", 256, true);
+// addBookToLibrary("Magic Tree House: Dinosaurs Before Dark", "Mary Pope Osborn", 80, true);
+
+addBookButton.addEventListener("click", function() {
+    addBookToLibrary("test", "test", 10, true)
+});
 
 console.log(addBookButton)
