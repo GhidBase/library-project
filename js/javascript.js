@@ -30,9 +30,17 @@ function addBookToLibrary(title, author, pages, readStatus) {
     addFieldToBook("Author:", author, newDiv);
     addFieldToBook("Pages", pages, newDiv);
     
-    let readStatusP = document.createElement("p");
-    readStatusP.textContent = readStatus ? "Already finished reading" : "Haven't read yet";
-    newDiv.appendChild(readStatusP);
+
+    let readStatusDiv = document.createElement("div");
+    newDiv.appendChild(readStatusDiv);
+    let readStatusCheckbox = document.createElement("input");
+    readStatusCheckbox.setAttribute("type", "checkbox");
+    readStatusCheckbox.setAttribute("id", "read-status");
+    readStatusDiv.appendChild(readStatusCheckbox);
+    let readStatusLabel = document.createElement("label");
+    readStatusLabel.setAttribute("for", "read-status");
+    readStatusLabel.textContent = readStatus ? "Already finished reading" : "Haven't read yet";
+    readStatusDiv.appendChild(readStatusLabel);
 
     let newButton = document.createElement("button");
     newButton.textContent = "Remove";

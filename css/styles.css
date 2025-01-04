@@ -69,7 +69,8 @@ body {
     margin-bottom: 2px;
 }
 
-.book>p {
+.book > p,
+.book > input {
     margin-bottom: 8px;
 }
 
