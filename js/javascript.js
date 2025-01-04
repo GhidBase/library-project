@@ -1,6 +1,7 @@
 const myLibrary = [];
 
 const libraryElement = document.querySelector("#library");
+const addBookButton = document.querySelector("#addBook");
 
 function Book(title, author, pages, readStatus) {
     this.title = title;
@@ -13,18 +14,10 @@ function addBookToLibrary(title, author, pages, readStatus) {
     myLibrary.push(new Book(title, author, pages, readStatus));
     let newDiv = document.createElement("div");
     newDiv.classList.add("book");
-    libraryElement.appendChild(newDiv);
-}
-
-function initializeLibrary() {
-    for (const book of myLibrary) {
-        console.log(book.title)
-    }
+    libraryElement.insertBefore(newDiv, addBookButton);
 }
 
 addBookToLibrary("The Way of the Wolf", "Jordan Belfort", 256, true);
 addBookToLibrary("Magic Tree House: Dinosaurs Before Dark", "Mary Pope Osborn", 80, true);
 
-initializeLibrary();
-
-console.log(libraryElement);
+console.log(addBookButton)

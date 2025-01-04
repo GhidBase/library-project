@@ -30,12 +30,15 @@ body {
 
 .library {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 250px);
+    grid-template-columns: repeat(auto-fit, 125px);
+    grid-template-rows: repeat(auto-fit, 250px);
     grid-row: 2;
     padding: 25px 10% 25px 10%;
     flex: 1;
     background-color: var(--background-color);
     justify-content: center;
+    justify-items: center;
+    align-items: center;
 }
 
 .book {
@@ -45,7 +48,7 @@ body {
     box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.705);
     border-radius: 8px;
     border: 1px solid black;
-    justify-self: center;
+    grid-column: span 2;
 }
 
 
@@ -91,4 +94,16 @@ body {
     transform: translate(-50%, -50%);
     background-color: grey;
     z-index: 2;
+}
+
+.addBook {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addBook img {
+    height: 100px;
 }
