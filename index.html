@@ -12,19 +12,19 @@
     </head>
     <body>
 
-        <div class="book-input" id="book-input">
+        <form class="book-input" id="book-input">
             <div class="inputs">
                 <div>
                     <label for="title">Title</label>
-                    <input type="text" name="title" id="title">
+                    <input type="text" name="title" id="title" required>
                 </div>
                 <div>
                     <label for="author">Author</label>
-                    <input type="text" name="author" id="author">
+                    <input type="text" name="author" id="author" required>
                 </div>
                 <div>
                     <label for="pages">Pages</label>
-                    <input type="number" name="pages" id="pages">
+                    <input type="number" name="pages" id="pages" required>
                 </div>
             </div>
 
@@ -36,7 +36,7 @@
                 <button id="submit-button">Add</button>
                 <button id="cancel-button">Cancel</button>
             </div>
-        </div>
+        </form>
 
         <div class="header">
             <h1>Library Log</h1>

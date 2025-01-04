@@ -18,6 +18,9 @@ function Book(title, author, pages, readStatus) {
 }
 
 function addBookToLibrary(title, author, pages, readStatus) {
+    if (!(title && author && pages)) {
+        return;
+    }
     myLibrary.push(new Book(title, author, pages, readStatus));
 
     let newDiv = document.createElement("div");
@@ -79,7 +82,6 @@ cancelButton.addEventListener("click", function() {
 
 submitButton.addEventListener("click", function() {
     addBookToLibrary(titleInput.value, authorInput.value, pagesInput.value, readStatus.checked)
-    console.log(titleInput.value, authorInput.value, pagesInput.value, readStatus.checked)
 })
 
 hideAddBookWindow();
