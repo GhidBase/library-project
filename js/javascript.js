@@ -4,6 +4,7 @@ const libraryElement = document.querySelector("#library");
 const addBookButton = document.querySelector("#addBook");
 const cancelButton = document.querySelector("#cancel-button");
 const bookInputWindow = document.querySelector("#book-input");
+const transparentPanel = document.querySelector("#transparent-blocker");
 const submitButton = document.querySelector("#submit-button");
 const titleInput = bookInputWindow.querySelector("#title");
 const authorInput = bookInputWindow.querySelector("#author");
@@ -71,10 +72,12 @@ function addFieldToBook(header, data, target) {
 
 
 function hideAddBookWindow() {
+    document.body.removeChild(transparentPanel);
     document.body.removeChild(bookInputWindow);
 }
 
 function displayAddBookWindow() {
+    document.body.appendChild(transparentPanel);
     document.body.appendChild(bookInputWindow);
 }
 

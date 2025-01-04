@@ -15,6 +15,7 @@
     --background-color: var(--grey);
     --book-background-color: var(--green-2);
     --book-color: var(--white);
+    --transparent-panel-background-color: rgba(128, 128, 128, 0.575);
 }
 
 a {
@@ -124,7 +125,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: grey;
+    background-color: var(--footer-and-header-background-color);
+    color: var(--white);
+    border-radius: 12px;
     z-index: 2;
 
     display: flex;
@@ -154,6 +157,13 @@ body {
 
 .book-input > .inputs > div > label {
     align-self: center;
+    font-weight: 500;
+    text-shadow: 0 0 5px black;
+    margin-bottom: 2px;
+}
+
+.book-input input {
+    margin-bottom: 8px;
 }
 
 .book-input .clickables {
@@ -174,4 +184,11 @@ body {
 
 .addBook img {
     height: 100px;
+}
+
+.transparent-blocker {
+    background-color: var(--transparent-panel-background-color);
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
